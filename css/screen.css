@@ -1,0 +1,354 @@
+@charset "UTF-8";
+/* ordre d'importation des fichiers */
+/*ici creer les variable avec ex: tableau de couleur*/
+/* 
+RESET
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/css?family=Lato);
+/* line 9, ../sass/base/_reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 30, ../sass/base/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 34, ../sass/base/_reset.scss */
+body {
+  line-height: 1; }
+
+/* line 37, ../sass/base/_reset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 40, ../sass/base/_reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 43, ../sass/base/_reset.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 48, ../sass/base/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*ici touts les balises g├®n├®riques*/
+/* line 2, ../sass/base/_base.scss */
+html {
+  background-color: #202122;
+  text-align: center; }
+
+/* line 6, ../sass/base/_base.scss */
+header {
+  background-color: black;
+  border-bottom: 1px solid #505457; }
+
+/* line 11, ../sass/base/_base.scss */
+h1 {
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  margin: 0 3rem; }
+
+/* line 18, ../sass/base/_base.scss */
+h3 {
+  position: relative;
+  padding-top: 5rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem; }
+
+/* line 24, ../sass/base/_base.scss */
+h3::before {
+  position: absolute;
+  bottom: -1rem;
+  text-align: center;
+  display: block;
+  content: "";
+  width: 10rem;
+  height: 3px;
+  background-color: #949495;
+  left: calc(50% - 5rem); }
+
+/* line 37, ../sass/base/_base.scss */
+h3 h3::before {
+  display: inline-block; }
+
+/* line 40, ../sass/base/_base.scss */
+h4 {
+  padding-left: 1rem; }
+
+/* line 43, ../sass/base/_base.scss */
+p {
+  color: #949495;
+  padding: 1rem;
+  font-size: 1.3rem; }
+
+/* line 50, ../sass/base/_base.scss */
+strong {
+  color: #e21818; }
+
+/*
+HEADER
+*/
+/* line 5, ../sass/layout/_layout.scss */
+.logo {
+  height: 4rem;
+  width: 8rem;
+  background-color: #fdc501; }
+/* line 9, ../sass/layout/_layout.scss */
+.logo img {
+  height: 2rem;
+  width: 4rem;
+  margin: 1rem 2rem; }
+
+/* line 15, ../sass/layout/_layout.scss */
+.social-header {
+  display: none; }
+
+/*
+MENU
+*/
+/* line 21, ../sass/layout/_layout.scss */
+#menuPrincipale {
+  display: none; }
+
+/*
+HAMBURGER
+*/
+/* line 33, ../sass/layout/_layout.scss */
+.colored {
+  color: #fdc501; }
+
+/* line 38, ../sass/layout/_layout.scss */
+footer {
+  position: relative;
+  background-color: black;
+  text-align: center;
+  padding: 0 1rem; }
+/* line 43, ../sass/layout/_layout.scss */
+footer a {
+  text-decoration: none;
+  color: #fdc501; }
+/* line 47, ../sass/layout/_layout.scss */
+footer #top {
+  position: absolute;
+  top: -1.5rem;
+  left: calc(50% - 3rem);
+  background-color: #e64e04;
+  color: white;
+  text-decoration: none;
+  padding: 1rem; }
+/* line 56, ../sass/layout/_layout.scss */
+footer .social-footer {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+/* line 65, ../sass/layout/_layout.scss */
+footer .social-footer .fab {
+  font-size: 1.5rem;
+  color: #949495;
+  margin: 0 1rem; }
+/* line 71, ../sass/layout/_layout.scss */
+footer .logo-footer {
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  height: 4rem;
+  width: 8rem;
+  display: inline-block; }
+/* line 77, ../sass/layout/_layout.scss */
+footer .logo-footer ::before {
+  position: absolute;
+  top: -1rem;
+  text-align: center;
+  display: inline-block;
+  content: "";
+  width: 10rem;
+  height: 3px;
+  background-color: #949495;
+  left: calc(50% - 5rem); }
+
+/* line 1, ../sass/modules/_section-home.scss */
+.section-home {
+  height: 50rem;
+  background-image: url("../img/hero-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 60%; }
+
+/* line 11, ../sass/modules/_section-home.scss */
+.titre-ban {
+  padding-top: 5rem;
+  margin-bottom: 5rem; }
+
+/* line 1, ../sass/modules/_section-banner.scss */
+.section-banner {
+  background-color: #fdc501; }
+/* line 3, ../sass/modules/_section-banner.scss */
+.section-banner p {
+  padding: 2rem 1rem;
+  color: white; }
+/* line 7, ../sass/modules/_section-banner.scss */
+.section-banner img {
+  height: 8rem;
+  width: 8rem;
+  margin-bottom: 2rem;
+  border-radius: 100%;
+  position: relative; }
+/* line 14, ../sass/modules/_section-banner.scss */
+.section-banner .slider {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  top: -1rem; }
+
+/* line 1, ../sass/modules/_section-contact.scss */
+.section-contact {
+  width: 100%; }
+/* line 4, ../sass/modules/_section-contact.scss */
+.section-contact form {
+  display: flex;
+  flex-direction: column; }
+/* line 8, ../sass/modules/_section-contact.scss */
+.section-contact form div {
+  padding: 1rem 0; }
+/* line 13, ../sass/modules/_section-contact.scss */
+.section-contact input {
+  width: calc(100% - 2rem);
+  height: 2rem; }
+/* line 17, ../sass/modules/_section-contact.scss */
+.section-contact #message {
+  height: 10rem;
+  margin-bottom: 2rem; }
+/* line 21, ../sass/modules/_section-contact.scss */
+.section-contact #send {
+  padding: 1rem 8rem;
+  background-color: #fdc501;
+  color: white;
+  text-decoration: none;
+  text-align: center; }
+/* line 28, ../sass/modules/_section-contact.scss */
+.section-contact h4 {
+  color: #fdc501;
+  font-size: 1.5rem;
+  text-align: left;
+  margin-bottom: 1rem; }
+/* line 34, ../sass/modules/_section-contact.scss */
+.section-contact p {
+  text-align: left;
+  margin-bottom: 2rem; }
+
+/* line 1, ../sass/modules/_section-works.scss */
+.bnt-more {
+  position: relative;
+  top: -0.5rem;
+  background-color: #e64e04;
+  color: white;
+  text-decoration: none;
+  padding: 1rem; }
+
+/* line 10, ../sass/modules/_section-works.scss */
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 3rem; }
+
+/* line 16, ../sass/modules/_section-works.scss */
+.column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+/* line 22, ../sass/modules/_section-works.scss */
+.column img {
+  width: 100%;
+  height: auto; }
+
+/* line 1, ../sass/modules/_section-our-services.scss */
+.service {
+  line-height: 1.5rem;
+  text-align: left; }
+/* line 5, ../sass/modules/_section-our-services.scss */
+.service h4 {
+  font-size: 1.2rem;
+  color: #fdc501;
+  margin: 2rem 1rem; }
+/* line 10, ../sass/modules/_section-our-services.scss */
+.service p {
+  margin: 1rem; }
+
+/* line 1, ../sass/modules/_section-who-are-we.scss */
+.section-who-are-we {
+  background-color: black; }
+/* line 4, ../sass/modules/_section-who-are-we.scss */
+.section-who-are-we h3 {
+  color: white; }
+
+/* line 1, ../sass/modules/_section-our-team.scss */
+.section-our-team {
+  text-align: left;
+  padding-left: 1rem;
+  background-color: black; }
+/* line 5, ../sass/modules/_section-our-team.scss */
+.section-our-team img {
+  width: 7rem;
+  height: 7rem;
+  margin-left: 1rem; }
+/* line 10, ../sass/modules/_section-our-team.scss */
+.section-our-team h3 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem; }
+
+/* line 17, ../sass/modules/_section-our-team.scss */
+.team {
+  display: flex;
+  flex-direction: row; }
+
+/* line 21, ../sass/modules/_section-our-team.scss */
+.col-team-1 {
+  width: 33%; }
+
+/* line 25, ../sass/modules/_section-our-team.scss */
+.col-team-2 {
+  width: 67%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+/* line 32, ../sass/modules/_section-our-team.scss */
+.name {
+  color: #fdc501;
+  font-size: 1rem; }
+
+/* line 37, ../sass/modules/_section-our-team.scss */
+.job {
+  color: white;
+  font-size: 1rem; }
+
+/* line 42, ../sass/modules/_section-our-team.scss */
+.social-team {
+  padding-left: 1rem;
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  width: 15rem; }
+/* line 48, ../sass/modules/_section-our-team.scss */
+.social-team .fab {
+  color: white;
+  font-size: 1rem; }

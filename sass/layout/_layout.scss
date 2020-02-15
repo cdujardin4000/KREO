@@ -1,0 +1,95 @@
+/*
+HEADER
+*/
+
+.logo{
+    height: 4rem;
+    width: 8rem;
+    background-color: map-get($colors, color2);
+    img{
+        height: 2rem;
+        width: 4rem;
+        margin: 1rem 2rem;;
+    }
+}
+.social-header{
+    display: none;
+}
+/*
+MENU
+*/
+#menuPrincipale{
+    display: none;
+}
+
+/*
+HAMBURGER
+*/
+
+
+
+
+
+.colored{
+    color: map-get($colors, color2);
+}
+
+
+footer{
+    position: relative;
+    background-color: black;
+    text-align: center;
+    padding: 0 1rem;
+    a{
+        text-decoration: none;
+        color: map-get($colors, color2);
+    }
+    #top{
+        position: absolute;
+        top: -1.5rem;
+        left: calc(50% - 3rem);
+        background-color: map-get($colors, color3);
+        color: map-get($colors, color1);
+        text-decoration: none;
+        padding: 1rem;
+    }
+    .social-footer{
+        
+        padding-top: 5rem;
+        
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+
+        
+        .fab{
+            font-size: 1.5rem;
+            color: map-get($colors, color4);
+            margin: 0 1rem;
+        }
+    }
+    .logo-footer{
+        margin-top: 8rem;
+        margin-bottom: 4rem;
+        height: 4rem;
+        width: 8rem;
+        display: inline-block;
+        ::before{
+            position : absolute;  
+            top: -1rem;
+            text-align: center;
+            display: inline-block;
+            content: "";
+            width: 10rem; 
+            height: 3px;
+            background-color: map-get($colors, color4);
+            
+            left: calc(50% - 5rem);
+        }
+    }
+    
+}
+
+
+
+
