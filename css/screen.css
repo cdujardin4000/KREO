@@ -61,16 +61,30 @@ h1 {
   font-size: 3rem;
   color: white;
   text-align: center;
-  margin: 0 3rem; }
+  margin: 0 3rem;
+  position: relative;
+  display: inline-block; }
 
-/* line 18, ../sass/base/_base.scss */
+/* line 19, ../sass/base/_base.scss */
+h1::before {
+  position: absolute;
+  bottom: -1rem;
+  text-align: center;
+  display: inline-block;
+  content: "";
+  width: 10rem;
+  height: 3px;
+  background-color: #fdc501;
+  left: calc(50% - 5rem); }
+
+/* line 32, ../sass/base/_base.scss */
 h3 {
   position: relative;
   padding-top: 5rem;
   margin-bottom: 2rem;
   font-size: 1.5rem; }
 
-/* line 24, ../sass/base/_base.scss */
+/* line 39, ../sass/base/_base.scss */
 h3::before {
   position: absolute;
   bottom: -1rem;
@@ -82,21 +96,21 @@ h3::before {
   background-color: #949495;
   left: calc(50% - 5rem); }
 
-/* line 37, ../sass/base/_base.scss */
+/* line 52, ../sass/base/_base.scss */
 h3 h3::before {
   display: inline-block; }
 
-/* line 40, ../sass/base/_base.scss */
+/* line 55, ../sass/base/_base.scss */
 h4 {
   padding-left: 1rem; }
 
-/* line 43, ../sass/base/_base.scss */
+/* line 58, ../sass/base/_base.scss */
 p {
   color: #949495;
   padding: 1rem;
   font-size: 1.3rem; }
 
-/* line 50, ../sass/base/_base.scss */
+/* line 65, ../sass/base/_base.scss */
 strong {
   color: #e21818; }
 
@@ -128,21 +142,66 @@ MENU
 /*
 HAMBURGER
 */
+/* line 28, ../sass/layout/_layout.scss */
+.burger-box {
+  position: absolute;
+  right: 2rem;
+  top: 2rem; }
+
 /* line 33, ../sass/layout/_layout.scss */
+.hamburger {
+  position: relative;
+  width: 42px;
+  height: 24px;
+  cursor: pointer; }
+
+/* line 41, ../sass/layout/_layout.scss */
+.hamburger span {
+  width: 100%;
+  height: 4px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  background-color: #fdc501; }
+
+/* line 50, ../sass/layout/_layout.scss */
+.hamburger span::before, .hamburger span::after {
+  content: '';
+  transform: translateX(50%);
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #fdc501; }
+
+/* line 59, ../sass/layout/_layout.scss */
+.hamburger span::before {
+  transform: translateY(10px); }
+
+/* line 63, ../sass/layout/_layout.scss */
+.hamburger span::after {
+  transform: translateY(-10px); }
+
+/*
+LAYOUT
+*/
+/* line 70, ../sass/layout/_layout.scss */
 .colored {
   color: #fdc501; }
 
-/* line 38, ../sass/layout/_layout.scss */
+/*
+FOOTER
+*/
+/* line 77, ../sass/layout/_layout.scss */
 footer {
   position: relative;
   background-color: black;
   text-align: center;
   padding: 0 1rem; }
-/* line 43, ../sass/layout/_layout.scss */
+/* line 82, ../sass/layout/_layout.scss */
 footer a {
   text-decoration: none;
   color: #fdc501; }
-/* line 47, ../sass/layout/_layout.scss */
+/* line 86, ../sass/layout/_layout.scss */
 footer #top {
   position: absolute;
   top: -1.5rem;
@@ -151,25 +210,26 @@ footer #top {
   color: white;
   text-decoration: none;
   padding: 1rem; }
-/* line 56, ../sass/layout/_layout.scss */
+/* line 95, ../sass/layout/_layout.scss */
 footer .social-footer {
   padding-top: 5rem;
   display: flex;
   flex-direction: row;
   justify-content: center; }
-/* line 65, ../sass/layout/_layout.scss */
+/* line 104, ../sass/layout/_layout.scss */
 footer .social-footer .fab {
   font-size: 1.5rem;
   color: #949495;
   margin: 0 1rem; }
-/* line 71, ../sass/layout/_layout.scss */
+/* line 110, ../sass/layout/_layout.scss */
 footer .logo-footer {
+  color: #949495;
   margin-top: 8rem;
   margin-bottom: 4rem;
   height: 4rem;
   width: 8rem;
   display: inline-block; }
-/* line 77, ../sass/layout/_layout.scss */
+/* line 117, ../sass/layout/_layout.scss */
 footer .logo-footer ::before {
   position: absolute;
   top: -1rem;
@@ -180,6 +240,9 @@ footer .logo-footer ::before {
   height: 3px;
   background-color: #949495;
   left: calc(50% - 5rem); }
+/* line 128, ../sass/layout/_layout.scss */
+footer .logo-footer img {
+  color: #949495; }
 
 /* line 1, ../sass/modules/_section-home.scss */
 .section-home {
@@ -188,12 +251,34 @@ footer .logo-footer ::before {
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 60%; }
+/* line 7, ../sass/modules/_section-home.scss */
+.section-home p {
+  padding: 2rem;
+  line-height: 2rem;
+  font-size: 2rem; }
 
-/* line 11, ../sass/modules/_section-home.scss */
+/* line 14, ../sass/modules/_section-home.scss */
 .titre-ban {
   padding-top: 5rem;
   margin-bottom: 5rem; }
 
+@media only screen and (min-width: 700px) {
+  /* line 21, ../sass/modules/_section-home.scss */
+  .section-home {
+    text-align: left;
+    padding-right: 10rem;
+    padding-left: 5rem;
+    height: auto; }
+  /* line 26, ../sass/modules/_section-home.scss */
+  .section-home h1 {
+    padding-top: 5rem;
+    text-align: left; }
+  /* line 30, ../sass/modules/_section-home.scss */
+  .section-home h1::before {
+    left: 0; }
+  /* line 33, ../sass/modules/_section-home.scss */
+  .section-home p {
+    padding-bottom: 3rem; } }
 /* line 1, ../sass/modules/_section-banner.scss */
 .section-banner {
   background-color: #fdc501; }
@@ -219,38 +304,43 @@ footer .logo-footer ::before {
 /* line 1, ../sass/modules/_section-contact.scss */
 .section-contact {
   width: 100%; }
-/* line 4, ../sass/modules/_section-contact.scss */
+/* line 2, ../sass/modules/_section-contact.scss */
+.section-contact h3 {
+  color: white; }
+/* line 7, ../sass/modules/_section-contact.scss */
 .section-contact form {
   display: flex;
   flex-direction: column; }
-/* line 8, ../sass/modules/_section-contact.scss */
+/* line 11, ../sass/modules/_section-contact.scss */
 .section-contact form div {
   padding: 1rem 0; }
-/* line 13, ../sass/modules/_section-contact.scss */
+/* line 16, ../sass/modules/_section-contact.scss */
 .section-contact input {
-  width: calc(100% - 2rem);
+  width: calc(100% - 4rem);
   height: 2rem; }
-/* line 17, ../sass/modules/_section-contact.scss */
+/* line 20, ../sass/modules/_section-contact.scss */
 .section-contact #message {
   height: 10rem;
   margin-bottom: 2rem; }
-/* line 21, ../sass/modules/_section-contact.scss */
+/* line 24, ../sass/modules/_section-contact.scss */
 .section-contact #send {
-  padding: 1rem 8rem;
+  padding: 1rem 10rem;
   background-color: #fdc501;
   color: white;
   text-decoration: none;
   text-align: center; }
-/* line 28, ../sass/modules/_section-contact.scss */
+/* line 31, ../sass/modules/_section-contact.scss */
 .section-contact h4 {
   color: #fdc501;
   font-size: 1.5rem;
   text-align: left;
-  margin-bottom: 1rem; }
-/* line 34, ../sass/modules/_section-contact.scss */
+  margin-bottom: 1rem;
+  padding: 0 2rem; }
+/* line 38, ../sass/modules/_section-contact.scss */
 .section-contact p {
   text-align: left;
-  margin-bottom: 2rem; }
+  margin: 2rem 0;
+  padding: 0 2rem; }
 
 /* line 1, ../sass/modules/_section-works.scss */
 .bnt-more {
@@ -279,19 +369,60 @@ footer .logo-footer ::before {
   width: 100%;
   height: auto; }
 
-/* line 1, ../sass/modules/_section-our-services.scss */
+/* line 30, ../sass/modules/_section-works.scss */
+.section-works h3 {
+  color: white; }
+
+@media only screen and (min-width: 700px) {
+  /* line 36, ../sass/modules/_section-works.scss */
+  .bnt-more {
+    left: 15rem; }
+
+  /* line 39, ../sass/modules/_section-works.scss */
+  .gallery {
+    flex-direction: column; }
+
+  /* line 42, ../sass/modules/_section-works.scss */
+  .column {
+    flex-direction: row;
+    height: 50%;
+    width: 100%; } }
+/* line 2, ../sass/modules/_section-our-services.scss */
+.section-our-services h3 {
+  color: white; }
+
+/* line 7, ../sass/modules/_section-our-services.scss */
 .service {
-  line-height: 1.5rem;
-  text-align: left; }
-/* line 5, ../sass/modules/_section-our-services.scss */
+  line-height: 1.5rem; }
+/* line 12, ../sass/modules/_section-our-services.scss */
 .service h4 {
+  text-align: left;
   font-size: 1.2rem;
   color: #fdc501;
   margin: 2rem 1rem; }
-/* line 10, ../sass/modules/_section-our-services.scss */
+/* line 18, ../sass/modules/_section-our-services.scss */
 .service p {
-  margin: 1rem; }
+  text-align: left;
+  margin: 0 1rem; }
 
+@media only screen and (min-width: 700px) {
+  /* line 25, ../sass/modules/_section-our-services.scss */
+  .services {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+
+  /* line 30, ../sass/modules/_section-our-services.scss */
+  .column-services {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+    justify-content: flex-start; }
+
+  /* line 37, ../sass/modules/_section-our-services.scss */
+  .service {
+    width: 33.33%; } }
 /* line 1, ../sass/modules/_section-who-are-we.scss */
 .section-who-are-we {
   background-color: black; }

@@ -9,7 +9,7 @@ HEADER
     img{
         height: 2rem;
         width: 4rem;
-        margin: 1rem 2rem;;
+        margin: 1rem 2rem;
     }
 }
 .social-header{
@@ -25,16 +25,55 @@ MENU
 /*
 HAMBURGER
 */
-
-
-
-
+.burger-box{
+    position: absolute;
+    right: 2rem;
+    top:2rem;
+}
+.hamburger{
+    position: relative;
+    
+    width: 42px;
+    height:24px;
+    
+    cursor: pointer;
+}
+.hamburger span{
+    width: 100%;
+    height: 4px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    
+    background-color: map-get($colors, color2);
+}
+.hamburger span::before, .hamburger span::after{
+    content: '';
+    transform: translateX(50%);
+    position: absolute;
+    width:100%;
+    height: 4px;
+    background-color: map-get($colors, color2);
+    
+}
+.hamburger span::before{
+    transform: translateY(10px);
+    
+}
+.hamburger span::after{
+    transform: translateY(-10px);
+}
+/*
+LAYOUT
+*/
 
 .colored{
     color: map-get($colors, color2);
 }
 
-
+/*
+FOOTER
+*/
 footer{
     position: relative;
     background-color: black;
@@ -69,6 +108,7 @@ footer{
         }
     }
     .logo-footer{
+        color: map-get($colors, color4);
         margin-top: 8rem;
         margin-bottom: 4rem;
         height: 4rem;
@@ -83,8 +123,10 @@ footer{
             width: 10rem; 
             height: 3px;
             background-color: map-get($colors, color4);
-            
             left: calc(50% - 5rem);
+        }
+        img{
+            color: map-get($colors, color4);
         }
     }
     

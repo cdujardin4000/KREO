@@ -1,11 +1,14 @@
 .section-home{
     height: 50rem;
-    background-image: url("../img/hero-bg.jpg") ;
+    background-image: url("../img/hero-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: 60%;
-
-
+        p{
+            padding: 2rem;
+            line-height: 2rem;
+            font-size: 2rem;
+        }
 }
 
 .titre-ban{
@@ -13,3 +16,23 @@
     margin-bottom: 5rem;
 }
 
+@media only screen and (min-width: 700px){
+    
+    .section-home{
+        text-align: left;
+        padding-right: 10rem;
+        padding-left: 5rem;
+        height: auto;
+            h1{
+                padding-top: 5rem;
+                text-align: left;
+            }
+            h1::before{
+                left: 0;
+            }
+            p{
+                padding-bottom: 3rem;
+            }
+    }
+    
+}
