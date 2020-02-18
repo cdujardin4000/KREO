@@ -15,6 +15,7 @@
 }
 
 .team{
+    padding-top: 1rem;
     display: flex;
     flex-direction: row;
 }
@@ -43,11 +44,51 @@
     padding-left: 1rem;
     height: 4rem;
     display: flex;
-    justify-content: space-around;
-    width: 15rem;
+    justify-content: space-between;
+    width: 12rem;
         .fab{
         color: map-get($colors, color1);
         font-size: 1rem;
         
         }
+}
+
+@media only screen and (min-width: 700px){
+    .section-our-team{
+        padding-left: 0;
+            img{
+                margin-left: 0;
+                margin-bottom: 1rem;
+                width: 100%;
+                height: auto;
+            }
+    }
+    .team{
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        
+    }
+    .col-team-1 {
+        width: 100%;
+    }
+    .col-team-2{
+        width: 100%;
+    }
+    .members{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .member{
+        width: 31%;
+
+    }
+}
+
+@media only screen and (min-width: 1100px){
+    .member{
+        width: 24%;
+
+    }
 }

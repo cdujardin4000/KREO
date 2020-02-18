@@ -5,8 +5,8 @@
 RESET
 */
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+	v2.0 | 20110126
+	License: none (public domain)
 */
 @import url(https://fonts.googleapis.com/css?family=Lato);
 /* line 9, ../sass/base/_reset.scss */
@@ -96,21 +96,21 @@ h3::before {
   background-color: #949495;
   left: calc(50% - 5rem); }
 
-/* line 52, ../sass/base/_base.scss */
+/* line 51, ../sass/base/_base.scss */
 h3 h3::before {
   display: inline-block; }
 
-/* line 55, ../sass/base/_base.scss */
+/* line 54, ../sass/base/_base.scss */
 h4 {
   padding-left: 1rem; }
 
-/* line 58, ../sass/base/_base.scss */
+/* line 57, ../sass/base/_base.scss */
 p {
   color: #949495;
   padding: 1rem;
   font-size: 1.3rem; }
 
-/* line 65, ../sass/base/_base.scss */
+/* line 64, ../sass/base/_base.scss */
 strong {
   color: #e21818; }
 
@@ -210,18 +210,21 @@ footer #top {
   color: white;
   text-decoration: none;
   padding: 1rem; }
-/* line 95, ../sass/layout/_layout.scss */
+/* line 96, ../sass/layout/_layout.scss */
+footer .copyright {
+  margin-top: 3rem; }
+/* line 99, ../sass/layout/_layout.scss */
 footer .social-footer {
   padding-top: 5rem;
   display: flex;
   flex-direction: row;
   justify-content: center; }
-/* line 104, ../sass/layout/_layout.scss */
+/* line 108, ../sass/layout/_layout.scss */
 footer .social-footer .fab {
   font-size: 1.5rem;
   color: #949495;
   margin: 0 1rem; }
-/* line 110, ../sass/layout/_layout.scss */
+/* line 114, ../sass/layout/_layout.scss */
 footer .logo-footer {
   color: #949495;
   margin-top: 8rem;
@@ -229,7 +232,7 @@ footer .logo-footer {
   height: 4rem;
   width: 8rem;
   display: inline-block; }
-/* line 117, ../sass/layout/_layout.scss */
+/* line 121, ../sass/layout/_layout.scss */
 footer .logo-footer ::before {
   position: absolute;
   top: -1rem;
@@ -240,7 +243,7 @@ footer .logo-footer ::before {
   height: 3px;
   background-color: #949495;
   left: calc(50% - 5rem); }
-/* line 128, ../sass/layout/_layout.scss */
+/* line 132, ../sass/layout/_layout.scss */
 footer .logo-footer img {
   color: #949495; }
 
@@ -304,31 +307,32 @@ footer .logo-footer img {
 /* line 1, ../sass/modules/_section-contact.scss */
 .section-contact {
   width: 100%; }
-/* line 2, ../sass/modules/_section-contact.scss */
+/* line 3, ../sass/modules/_section-contact.scss */
 .section-contact h3 {
   color: white; }
-/* line 7, ../sass/modules/_section-contact.scss */
+/* line 6, ../sass/modules/_section-contact.scss */
 .section-contact form {
   display: flex;
   flex-direction: column; }
-/* line 11, ../sass/modules/_section-contact.scss */
+/* line 10, ../sass/modules/_section-contact.scss */
 .section-contact form div {
   padding: 1rem 0; }
-/* line 16, ../sass/modules/_section-contact.scss */
+/* line 15, ../sass/modules/_section-contact.scss */
 .section-contact input {
   width: calc(100% - 4rem);
   height: 2rem; }
-/* line 20, ../sass/modules/_section-contact.scss */
+/* line 19, ../sass/modules/_section-contact.scss */
 .section-contact #message {
   height: 10rem;
   margin-bottom: 2rem; }
-/* line 24, ../sass/modules/_section-contact.scss */
+/* line 23, ../sass/modules/_section-contact.scss */
 .section-contact #send {
-  padding: 1rem 10rem;
+  padding: 1rem 8rem;
   background-color: #fdc501;
   color: white;
   text-decoration: none;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 2rem; }
 /* line 31, ../sass/modules/_section-contact.scss */
 .section-contact h4 {
   color: #fdc501;
@@ -341,7 +345,25 @@ footer .logo-footer img {
   text-align: left;
   margin: 2rem 0;
   padding: 0 2rem; }
+/* line 45, ../sass/modules/_section-contact.scss */
+.section-contact .info {
+  margin-bottom: 5rem; }
 
+@media only screen and (min-width: 700px) {
+  /* line 51, ../sass/modules/_section-contact.scss */
+  .contacts {
+    display: flex; }
+
+  /* line 56, ../sass/modules/_section-contact.scss */
+  .formulaire, .info {
+    width: 50%; }
+
+  /* line 59, ../sass/modules/_section-contact.scss */
+  .info {
+    padding-bottom: 2rem; }
+  /* line 61, ../sass/modules/_section-contact.scss */
+  .info p {
+    margin-top: 1rem; } }
 /* line 1, ../sass/modules/_section-works.scss */
 .bnt-more {
   position: relative;
@@ -356,71 +378,65 @@ footer .logo-footer img {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-top: 3rem; }
-
-/* line 16, ../sass/modules/_section-works.scss */
-.column {
+  margin-top: 3rem;
+  flex-wrap: wrap; }
+/* line 17, ../sass/modules/_section-works.scss */
+.gallery img {
   width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; }
-/* line 22, ../sass/modules/_section-works.scss */
-.column img {
-  width: 100%;
   height: auto; }
 
-/* line 30, ../sass/modules/_section-works.scss */
+/* line 25, ../sass/modules/_section-works.scss */
 .section-works h3 {
   color: white; }
 
 @media only screen and (min-width: 700px) {
-  /* line 36, ../sass/modules/_section-works.scss */
+  /* line 31, ../sass/modules/_section-works.scss */
   .bnt-more {
     left: 15rem; }
 
-  /* line 39, ../sass/modules/_section-works.scss */
-  .gallery {
-    flex-direction: column; }
-
-  /* line 42, ../sass/modules/_section-works.scss */
-  .column {
-    flex-direction: row;
-    height: 50%;
-    width: 100%; } }
+  /* line 35, ../sass/modules/_section-works.scss */
+  .gallery img {
+    width: calc(100% / 3); } }
+@media only screen and (min-width: 1100px) {
+  /* line 45, ../sass/modules/_section-works.scss */
+  .gallery img {
+    width: calc(100% / 4); } }
 /* line 2, ../sass/modules/_section-our-services.scss */
 .section-our-services h3 {
   color: white; }
 
-/* line 7, ../sass/modules/_section-our-services.scss */
+/* line 6, ../sass/modules/_section-our-services.scss */
+.services {
+  padding-bottom: 5rem; }
+
+/* line 9, ../sass/modules/_section-our-services.scss */
 .service {
-  line-height: 1.5rem; }
-/* line 12, ../sass/modules/_section-our-services.scss */
+  line-height: 1.5rem;
+  padding-bottom: 1rem; }
+/* line 14, ../sass/modules/_section-our-services.scss */
 .service h4 {
   text-align: left;
   font-size: 1.2rem;
   color: #fdc501;
-  margin: 2rem 1rem; }
-/* line 18, ../sass/modules/_section-our-services.scss */
+  margin: 1rem 1rem; }
+/* line 20, ../sass/modules/_section-our-services.scss */
 .service p {
   text-align: left;
   margin: 0 1rem; }
 
 @media only screen and (min-width: 700px) {
-  /* line 25, ../sass/modules/_section-our-services.scss */
+  /* line 28, ../sass/modules/_section-our-services.scss */
   .services {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start; }
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap; }
 
-  /* line 30, ../sass/modules/_section-our-services.scss */
-  .column-services {
-    display: flex;
-    flex-direction: column;
-    height: 50%;
-    width: 100%;
-    justify-content: flex-start; }
-
-  /* line 37, ../sass/modules/_section-our-services.scss */
+  /* line 35, ../sass/modules/_section-our-services.scss */
+  .service {
+    width: 50%; } }
+@media only screen and (min-width: 1100px) {
+  /* line 42, ../sass/modules/_section-our-services.scss */
   .service {
     width: 33.33%; } }
 /* line 1, ../sass/modules/_section-who-are-we.scss */
@@ -430,6 +446,31 @@ footer .logo-footer img {
 .section-who-are-we h3 {
   color: white; }
 
+/* line 10, ../sass/modules/_section-who-are-we.scss */
+.are {
+  line-height: 1.5rem;
+  padding-bottom: 1rem; }
+/* line 15, ../sass/modules/_section-who-are-we.scss */
+.are h4 {
+  text-align: left;
+  font-size: 1.2rem;
+  color: #fdc501;
+  margin: 1rem 1rem; }
+/* line 21, ../sass/modules/_section-who-are-we.scss */
+.are p {
+  text-align: left;
+  margin: 0 1rem; }
+
+@media only screen and (min-width: 700px) {
+  /* line 29, ../sass/modules/_section-who-are-we.scss */
+  .ares {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start; }
+  /* line 35, ../sass/modules/_section-who-are-we.scss */
+  .ares .are {
+    width: 50%; } }
 /* line 1, ../sass/modules/_section-our-team.scss */
 .section-our-team {
   text-align: left;
@@ -448,38 +489,78 @@ footer .logo-footer img {
 
 /* line 17, ../sass/modules/_section-our-team.scss */
 .team {
+  padding-top: 1rem;
   display: flex;
   flex-direction: row; }
 
-/* line 21, ../sass/modules/_section-our-team.scss */
+/* line 22, ../sass/modules/_section-our-team.scss */
 .col-team-1 {
   width: 33%; }
 
-/* line 25, ../sass/modules/_section-our-team.scss */
+/* line 26, ../sass/modules/_section-our-team.scss */
 .col-team-2 {
   width: 67%;
   display: flex;
   flex-direction: column;
   justify-content: space-around; }
 
-/* line 32, ../sass/modules/_section-our-team.scss */
+/* line 33, ../sass/modules/_section-our-team.scss */
 .name {
   color: #fdc501;
   font-size: 1rem; }
 
-/* line 37, ../sass/modules/_section-our-team.scss */
+/* line 38, ../sass/modules/_section-our-team.scss */
 .job {
   color: white;
   font-size: 1rem; }
 
-/* line 42, ../sass/modules/_section-our-team.scss */
+/* line 43, ../sass/modules/_section-our-team.scss */
 .social-team {
   padding-left: 1rem;
   height: 4rem;
   display: flex;
-  justify-content: space-around;
-  width: 15rem; }
-/* line 48, ../sass/modules/_section-our-team.scss */
+  justify-content: space-between;
+  width: 12rem; }
+/* line 49, ../sass/modules/_section-our-team.scss */
 .social-team .fab {
   color: white;
   font-size: 1rem; }
+
+@media only screen and (min-width: 700px) {
+  /* line 57, ../sass/modules/_section-our-team.scss */
+  .section-our-team {
+    padding-left: 0; }
+  /* line 59, ../sass/modules/_section-our-team.scss */
+  .section-our-team img {
+    margin-left: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: auto; }
+
+  /* line 66, ../sass/modules/_section-our-team.scss */
+  .team {
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; }
+
+  /* line 72, ../sass/modules/_section-our-team.scss */
+  .col-team-1 {
+    width: 100%; }
+
+  /* line 75, ../sass/modules/_section-our-team.scss */
+  .col-team-2 {
+    width: 100%; }
+
+  /* line 78, ../sass/modules/_section-our-team.scss */
+  .members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+
+  /* line 83, ../sass/modules/_section-our-team.scss */
+  .member {
+    width: 31%; } }
+@media only screen and (min-width: 1100px) {
+  /* line 90, ../sass/modules/_section-our-team.scss */
+  .member {
+    width: 24%; } }

@@ -3,39 +3,43 @@
         color: map-get($colors, color1);
     }
 }
-
+.services{
+    padding-bottom: 5rem;
+}
 .service{
     line-height: 1.5rem;
-    
+    padding-bottom: 1rem;
     
         
         h4{
             text-align: left;
             font-size: 1.2rem;
             color: map-get($colors, color2);
-            margin: 2rem 1rem;
+            margin: 1rem 1rem;
         }
         p{
             text-align: left;
             margin: 0 1rem;
+            
         }
 }
 
 @media only screen and (min-width: 700px){
     .services{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: flex-start;
+        flex-wrap: wrap;
     }
-    .column-services{
-        display: flex;
-        flex-direction: column;
-        height: 50%;
-        width: 100%;
-        justify-content: flex-start;
+    
+    .service{
+        width: 50%;
     }
+
+}
+
+@media only screen and (min-width: 1100px){
     .service{
         width: 33.33%;
     }
-
 }
