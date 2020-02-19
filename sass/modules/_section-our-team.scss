@@ -57,12 +57,17 @@
     .section-our-team{
         max-width: 100%;
         padding: 0 1rem;
-        
+            p{
+                padding-left: 0;
+            }
             img{
                 margin-left: 0;
                 margin-bottom: 1rem;
                 width: 100%;
                 height: auto;
+            }
+            .social-team{
+                padding-left: 0;
             }
     }
     .team{
@@ -77,7 +82,7 @@
     .col-team-2{
         width: 100%;
         h4{
-            padding: .5rem 1rem ;
+            padding: .5rem 0 ;
         }
     }
     .members{

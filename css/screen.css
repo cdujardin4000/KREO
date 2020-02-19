@@ -48,7 +48,7 @@ table {
 /*ici touts les balises g├®n├®riques*/
 /* line 2, ../sass/base/_base.scss */
 html {
-  background-color: #202122;
+  background-color: #0f141a;
   text-align: center; }
 
 /* line 7, ../sass/base/_base.scss */
@@ -190,33 +190,29 @@ HAMBURGER
 /*
 LAYOUT
 */
-/* line 69, ../sass/layout/_layout.scss */
-.container {
-  width: 100%; }
-
-/* line 72, ../sass/layout/_layout.scss */
+/* line 70, ../sass/layout/_layout.scss */
 .wrap {
   max-width: 1400px;
   margin: 0 auto; }
 
-/* line 76, ../sass/layout/_layout.scss */
+/* line 74, ../sass/layout/_layout.scss */
 .colored {
   color: #fdc501; }
 
 /*
 FOOTER
 */
-/* line 83, ../sass/layout/_layout.scss */
+/* line 81, ../sass/layout/_layout.scss */
 footer {
   position: relative;
   background-color: black;
   text-align: center;
   padding: 0 1rem; }
-/* line 88, ../sass/layout/_layout.scss */
+/* line 86, ../sass/layout/_layout.scss */
 footer a {
   text-decoration: none;
   color: #fdc501; }
-/* line 92, ../sass/layout/_layout.scss */
+/* line 90, ../sass/layout/_layout.scss */
 footer #top {
   position: absolute;
   top: -1.5rem;
@@ -225,10 +221,10 @@ footer #top {
   color: white;
   text-decoration: none;
   padding: 1rem; }
-/* line 102, ../sass/layout/_layout.scss */
+/* line 100, ../sass/layout/_layout.scss */
 footer .copyright {
   margin-top: 3rem; }
-/* line 105, ../sass/layout/_layout.scss */
+/* line 103, ../sass/layout/_layout.scss */
 footer .social-footer {
   margin: 0 auto;
   width: 25rem;
@@ -239,22 +235,26 @@ footer .social-footer {
   flex-direction: row;
   justify-content: center;
   border-bottom: 2px solid #949495; }
-/* line 117, ../sass/layout/_layout.scss */
+/* line 115, ../sass/layout/_layout.scss */
 footer .social-footer .fab {
   font-size: 1.5rem;
   color: #949495;
   margin: 0 1rem; }
-/* line 123, ../sass/layout/_layout.scss */
+/* line 121, ../sass/layout/_layout.scss */
 footer .logo-footer {
   color: #949495;
   margin: 4rem 0;
   height: 4rem;
   width: 8rem;
   display: inline-block; }
-/* line 130, ../sass/layout/_layout.scss */
+/* line 128, ../sass/layout/_layout.scss */
 footer .logo-footer img {
   color: #949495; }
 
+@media only screen and (min-width: 1100px) {
+  /* line 139, ../sass/layout/_layout.scss */
+  footer {
+    padding: 0 20rem; } }
 /* line 1, ../sass/modules/_section-home.scss */
 .section-home {
   height: 50rem;
@@ -313,15 +313,11 @@ footer .logo-footer img {
   justify-content: center;
   top: -1rem; }
 
-/*@media only screen and (min-width: 700px){
-    .section-banner{
-            img{
-            height: 14rem;
-            width: 14rem;
-            }
-        }
-}
-
+@media only screen and (min-width: 700px) {
+  /* line 26, ../sass/modules/_section-banner.scss */
+  .section-banner {
+    padding: 2rem 5rem; } }
+/*
 @media only screen and (min-width: 1100px){
     .section-banner{
             & img{
@@ -391,6 +387,13 @@ footer .logo-footer img {
   .info p {
     margin-top: 1rem; } }
 /* line 1, ../sass/modules/_section-works.scss */
+.section-works {
+  background-color: black; }
+/* line 3, ../sass/modules/_section-works.scss */
+.section-works h3 {
+  color: white; }
+
+/* line 8, ../sass/modules/_section-works.scss */
 .bnt-more {
   position: relative;
   top: -0.5rem;
@@ -399,32 +402,33 @@ footer .logo-footer img {
   text-decoration: none;
   padding: 1rem; }
 
-/* line 10, ../sass/modules/_section-works.scss */
+/* line 18, ../sass/modules/_section-works.scss */
 .gallery {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   margin-top: 3rem;
-  flex-wrap: wrap; }
-/* line 17, ../sass/modules/_section-works.scss */
+  flex-wrap: wrap;
+  width: 100%; }
+/* line 25, ../sass/modules/_section-works.scss */
 .gallery img {
   width: 50%;
   height: auto; }
 
-/* line 25, ../sass/modules/_section-works.scss */
-.section-works h3 {
-  color: white; }
-
 @media only screen and (min-width: 700px) {
-  /* line 31, ../sass/modules/_section-works.scss */
+  /* line 33, ../sass/modules/_section-works.scss */
   .bnt-more {
     left: 15rem; }
 
-  /* line 35, ../sass/modules/_section-works.scss */
+  /* line 37, ../sass/modules/_section-works.scss */
   .gallery img {
-    width: calc(100% / 3); } }
+    width: calc(100% / 3); }
+
+  /* line 41, ../sass/modules/_section-works.scss */
+  .wrap-gallery {
+    padding: 0 2rem; } }
 @media only screen and (min-width: 1100px) {
-  /* line 45, ../sass/modules/_section-works.scss */
+  /* line 50, ../sass/modules/_section-works.scss */
   .gallery img {
     width: calc(100% / 4); } }
 /* line 2, ../sass/modules/_section-our-services.scss */
@@ -459,9 +463,15 @@ footer .logo-footer img {
 
   /* line 34, ../sass/modules/_section-our-services.scss */
   .service {
-    width: 50%; } }
+    width: 50%; }
+  /* line 36, ../sass/modules/_section-our-services.scss */
+  .service h4 {
+    margin: 1rem 0; }
+  /* line 39, ../sass/modules/_section-our-services.scss */
+  .service p {
+    margin: 0; } }
 @media only screen and (min-width: 1100px) {
-  /* line 41, ../sass/modules/_section-our-services.scss */
+  /* line 49, ../sass/modules/_section-our-services.scss */
   .service {
     width: 33.33%; } }
 /* line 1, ../sass/modules/_section-who-are-we.scss */
@@ -478,21 +488,24 @@ footer .logo-footer img {
 /* line 15, ../sass/modules/_section-who-are-we.scss */
 .are h4 {
   text-align: left;
+  padding-left: 0;
   color: #fdc501;
   margin: 1rem 1rem; }
 /* line 21, ../sass/modules/_section-who-are-we.scss */
 .are p {
   text-align: left;
-  margin: 0 1rem; }
+  margin: 0 1rem;
+  padding-left: 0;
+  padding-right: 0; }
 
 @media only screen and (min-width: 700px) {
-  /* line 29, ../sass/modules/_section-who-are-we.scss */
+  /* line 31, ../sass/modules/_section-who-are-we.scss */
   .ares {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start; }
-  /* line 35, ../sass/modules/_section-who-are-we.scss */
+  /* line 37, ../sass/modules/_section-who-are-we.scss */
   .ares .are {
     width: 50%; } }
 /* line 1, ../sass/modules/_section-our-team.scss */
@@ -555,40 +568,46 @@ footer .logo-footer img {
   .section-our-team {
     max-width: 100%;
     padding: 0 1rem; }
-  /* line 61, ../sass/modules/_section-our-team.scss */
+  /* line 60, ../sass/modules/_section-our-team.scss */
+  .section-our-team p {
+    padding-left: 0; }
+  /* line 63, ../sass/modules/_section-our-team.scss */
   .section-our-team img {
     margin-left: 0;
     margin-bottom: 1rem;
     width: 100%;
     height: auto; }
+  /* line 69, ../sass/modules/_section-our-team.scss */
+  .section-our-team .social-team {
+    padding-left: 0; }
 
-  /* line 68, ../sass/modules/_section-our-team.scss */
+  /* line 73, ../sass/modules/_section-our-team.scss */
   .team {
     flex-direction: column;
     justify-content: center;
     text-align: left; }
 
-  /* line 74, ../sass/modules/_section-our-team.scss */
+  /* line 79, ../sass/modules/_section-our-team.scss */
   .col-team-1 {
     width: 100%; }
 
-  /* line 77, ../sass/modules/_section-our-team.scss */
+  /* line 82, ../sass/modules/_section-our-team.scss */
   .col-team-2 {
     width: 100%; }
-  /* line 79, ../sass/modules/_section-our-team.scss */
+  /* line 84, ../sass/modules/_section-our-team.scss */
   .col-team-2 h4 {
-    padding: 0.5rem 1rem; }
+    padding: 0.5rem 0; }
 
-  /* line 83, ../sass/modules/_section-our-team.scss */
+  /* line 88, ../sass/modules/_section-our-team.scss */
   .members {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
 
-  /* line 88, ../sass/modules/_section-our-team.scss */
+  /* line 93, ../sass/modules/_section-our-team.scss */
   .member {
     width: 30%; } }
 @media only screen and (min-width: 1100px) {
-  /* line 95, ../sass/modules/_section-our-team.scss */
+  /* line 100, ../sass/modules/_section-our-team.scss */
   .member {
     width: 24%; } }

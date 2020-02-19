@@ -1,3 +1,10 @@
+.section-works{
+    background-color: black;
+    h3{
+        color: map-get($colors , color1);
+    }
+}
+
 .bnt-more{
     position: relative;
     top: -0.5rem;
@@ -7,24 +14,19 @@
     padding: 1rem;
     
 }
+
 .gallery{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     margin-top: 3rem;
     flex-wrap: wrap;
-    
+    width: 100%;
         img{
             width: 50%;
             height: auto;
             
         }
-}
-
-.section-works{
-    h3{
-        color: map-get($colors , color1);
-    }
 }
 
 @media only screen and (min-width: 700px){
@@ -35,6 +37,9 @@
         img{
             width: calc(100% / 3);
         }
+    }
+    .wrap-gallery{
+        padding: 0 2rem;
     }
 
 }
