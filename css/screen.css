@@ -51,12 +51,16 @@ html {
   background-color: #202122;
   text-align: center; }
 
-/* line 6, ../sass/base/_base.scss */
+/* line 7, ../sass/base/_base.scss */
+body {
+  font-size: 15px; }
+
+/* line 10, ../sass/base/_base.scss */
 header {
   background-color: black;
   border-bottom: 1px solid #505457; }
 
-/* line 11, ../sass/base/_base.scss */
+/* line 15, ../sass/base/_base.scss */
 h1 {
   font-size: 3rem;
   color: white;
@@ -65,7 +69,7 @@ h1 {
   position: relative;
   display: inline-block; }
 
-/* line 19, ../sass/base/_base.scss */
+/* line 23, ../sass/base/_base.scss */
 h1::before {
   position: absolute;
   bottom: -1rem;
@@ -77,14 +81,14 @@ h1::before {
   background-color: #fdc501;
   left: calc(50% - 5rem); }
 
-/* line 32, ../sass/base/_base.scss */
+/* line 36, ../sass/base/_base.scss */
 h3 {
   position: relative;
   padding-top: 5rem;
   margin-bottom: 2rem;
   font-size: 1.5rem; }
 
-/* line 39, ../sass/base/_base.scss */
+/* line 43, ../sass/base/_base.scss */
 h3::before {
   position: absolute;
   bottom: -1rem;
@@ -96,21 +100,23 @@ h3::before {
   background-color: #949495;
   left: calc(50% - 5rem); }
 
-/* line 51, ../sass/base/_base.scss */
+/* line 55, ../sass/base/_base.scss */
 h3 h3::before {
   display: inline-block; }
 
-/* line 54, ../sass/base/_base.scss */
+/* line 58, ../sass/base/_base.scss */
 h4 {
+  font-weight: bold;
+  font-size: 1.3rem;
   padding-left: 1rem; }
 
-/* line 57, ../sass/base/_base.scss */
+/* line 63, ../sass/base/_base.scss */
 p {
   color: #949495;
   padding: 1rem;
-  font-size: 1.3rem; }
+  font-size: 1.2rem; }
 
-/* line 64, ../sass/base/_base.scss */
+/* line 70, ../sass/base/_base.scss */
 strong {
   color: #e21818; }
 
@@ -184,24 +190,33 @@ HAMBURGER
 /*
 LAYOUT
 */
-/* line 70, ../sass/layout/_layout.scss */
+/* line 69, ../sass/layout/_layout.scss */
+.container {
+  width: 100%; }
+
+/* line 72, ../sass/layout/_layout.scss */
+.wrap {
+  max-width: 1400px;
+  margin: 0 auto; }
+
+/* line 76, ../sass/layout/_layout.scss */
 .colored {
   color: #fdc501; }
 
 /*
 FOOTER
 */
-/* line 77, ../sass/layout/_layout.scss */
+/* line 83, ../sass/layout/_layout.scss */
 footer {
   position: relative;
   background-color: black;
   text-align: center;
   padding: 0 1rem; }
-/* line 82, ../sass/layout/_layout.scss */
+/* line 88, ../sass/layout/_layout.scss */
 footer a {
   text-decoration: none;
   color: #fdc501; }
-/* line 86, ../sass/layout/_layout.scss */
+/* line 92, ../sass/layout/_layout.scss */
 footer #top {
   position: absolute;
   top: -1.5rem;
@@ -210,40 +225,33 @@ footer #top {
   color: white;
   text-decoration: none;
   padding: 1rem; }
-/* line 96, ../sass/layout/_layout.scss */
+/* line 102, ../sass/layout/_layout.scss */
 footer .copyright {
   margin-top: 3rem; }
-/* line 99, ../sass/layout/_layout.scss */
+/* line 105, ../sass/layout/_layout.scss */
 footer .social-footer {
+  margin: 0 auto;
+  width: 25rem;
   padding-top: 5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: row;
-  justify-content: center; }
-/* line 108, ../sass/layout/_layout.scss */
+  justify-content: center;
+  border-bottom: 2px solid #949495; }
+/* line 117, ../sass/layout/_layout.scss */
 footer .social-footer .fab {
   font-size: 1.5rem;
   color: #949495;
   margin: 0 1rem; }
-/* line 114, ../sass/layout/_layout.scss */
+/* line 123, ../sass/layout/_layout.scss */
 footer .logo-footer {
   color: #949495;
-  margin-top: 8rem;
-  margin-bottom: 4rem;
+  margin: 4rem 0;
   height: 4rem;
   width: 8rem;
   display: inline-block; }
-/* line 121, ../sass/layout/_layout.scss */
-footer .logo-footer ::before {
-  position: absolute;
-  top: -1rem;
-  text-align: center;
-  display: inline-block;
-  content: "";
-  width: 10rem;
-  height: 3px;
-  background-color: #949495;
-  left: calc(50% - 5rem); }
-/* line 132, ../sass/layout/_layout.scss */
+/* line 130, ../sass/layout/_layout.scss */
 footer .logo-footer img {
   color: #949495; }
 
@@ -295,8 +303,9 @@ footer .logo-footer img {
   width: 8rem;
   margin-bottom: 2rem;
   border-radius: 100%;
-  position: relative; }
-/* line 14, ../sass/modules/_section-banner.scss */
+  position: relative;
+  border: 10px solid white; }
+/* line 15, ../sass/modules/_section-banner.scss */
 .section-banner .slider {
   position: relative;
   display: flex;
@@ -304,6 +313,23 @@ footer .logo-footer img {
   justify-content: center;
   top: -1rem; }
 
+/*@media only screen and (min-width: 700px){
+    .section-banner{
+            img{
+            height: 14rem;
+            width: 14rem;
+            }
+        }
+}
+
+@media only screen and (min-width: 1100px){
+    .section-banner{
+            & img{
+            height: 20rem;
+            width: 20rem;
+            }
+        }
+}*/
 /* line 1, ../sass/modules/_section-contact.scss */
 .section-contact {
   width: 100%; }
@@ -314,18 +340,18 @@ footer .logo-footer img {
 .section-contact form {
   display: flex;
   flex-direction: column; }
-/* line 10, ../sass/modules/_section-contact.scss */
+/* line 9, ../sass/modules/_section-contact.scss */
 .section-contact form div {
   padding: 1rem 0; }
-/* line 15, ../sass/modules/_section-contact.scss */
+/* line 14, ../sass/modules/_section-contact.scss */
 .section-contact input {
   width: calc(100% - 4rem);
   height: 2rem; }
-/* line 19, ../sass/modules/_section-contact.scss */
+/* line 18, ../sass/modules/_section-contact.scss */
 .section-contact #message {
   height: 10rem;
   margin-bottom: 2rem; }
-/* line 23, ../sass/modules/_section-contact.scss */
+/* line 22, ../sass/modules/_section-contact.scss */
 .section-contact #send {
   padding: 1rem 8rem;
   background-color: #fdc501;
@@ -333,35 +359,35 @@ footer .logo-footer img {
   text-decoration: none;
   text-align: center;
   margin-bottom: 2rem; }
-/* line 31, ../sass/modules/_section-contact.scss */
+/* line 30, ../sass/modules/_section-contact.scss */
 .section-contact h4 {
   color: #fdc501;
   font-size: 1.5rem;
   text-align: left;
   margin-bottom: 1rem;
   padding: 0 2rem; }
-/* line 38, ../sass/modules/_section-contact.scss */
+/* line 37, ../sass/modules/_section-contact.scss */
 .section-contact p {
   text-align: left;
   margin: 2rem 0;
   padding: 0 2rem; }
-/* line 45, ../sass/modules/_section-contact.scss */
+/* line 44, ../sass/modules/_section-contact.scss */
 .section-contact .info {
   margin-bottom: 5rem; }
 
 @media only screen and (min-width: 700px) {
-  /* line 51, ../sass/modules/_section-contact.scss */
+  /* line 50, ../sass/modules/_section-contact.scss */
   .contacts {
     display: flex; }
 
-  /* line 56, ../sass/modules/_section-contact.scss */
+  /* line 55, ../sass/modules/_section-contact.scss */
   .formulaire, .info {
     width: 50%; }
 
-  /* line 59, ../sass/modules/_section-contact.scss */
+  /* line 58, ../sass/modules/_section-contact.scss */
   .info {
     padding-bottom: 2rem; }
-  /* line 61, ../sass/modules/_section-contact.scss */
+  /* line 60, ../sass/modules/_section-contact.scss */
   .info p {
     margin-top: 1rem; } }
 /* line 1, ../sass/modules/_section-works.scss */
@@ -416,27 +442,26 @@ footer .logo-footer img {
 /* line 14, ../sass/modules/_section-our-services.scss */
 .service h4 {
   text-align: left;
-  font-size: 1.2rem;
   color: #fdc501;
   margin: 1rem 1rem; }
-/* line 20, ../sass/modules/_section-our-services.scss */
+/* line 19, ../sass/modules/_section-our-services.scss */
 .service p {
   text-align: left;
   margin: 0 1rem; }
 
 @media only screen and (min-width: 700px) {
-  /* line 28, ../sass/modules/_section-our-services.scss */
+  /* line 27, ../sass/modules/_section-our-services.scss */
   .services {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap; }
 
-  /* line 35, ../sass/modules/_section-our-services.scss */
+  /* line 34, ../sass/modules/_section-our-services.scss */
   .service {
     width: 50%; } }
 @media only screen and (min-width: 1100px) {
-  /* line 42, ../sass/modules/_section-our-services.scss */
+  /* line 41, ../sass/modules/_section-our-services.scss */
   .service {
     width: 33.33%; } }
 /* line 1, ../sass/modules/_section-who-are-we.scss */
@@ -453,7 +478,6 @@ footer .logo-footer img {
 /* line 15, ../sass/modules/_section-who-are-we.scss */
 .are h4 {
   text-align: left;
-  font-size: 1.2rem;
   color: #fdc501;
   margin: 1rem 1rem; }
 /* line 21, ../sass/modules/_section-who-are-we.scss */
@@ -507,12 +531,12 @@ footer .logo-footer img {
 /* line 33, ../sass/modules/_section-our-team.scss */
 .name {
   color: #fdc501;
-  font-size: 1rem; }
+  font-size: 1.3rem; }
 
 /* line 38, ../sass/modules/_section-our-team.scss */
-.job {
-  color: white;
-  font-size: 1rem; }
+.col-team-2 .job {
+  font-size: 1rem;
+  color: white; }
 
 /* line 43, ../sass/modules/_section-our-team.scss */
 .social-team {
@@ -524,43 +548,47 @@ footer .logo-footer img {
 /* line 49, ../sass/modules/_section-our-team.scss */
 .social-team .fab {
   color: white;
-  font-size: 1rem; }
+  font-size: 1.2rem; }
 
 @media only screen and (min-width: 700px) {
   /* line 57, ../sass/modules/_section-our-team.scss */
   .section-our-team {
-    padding-left: 0; }
-  /* line 59, ../sass/modules/_section-our-team.scss */
+    max-width: 100%;
+    padding: 0 1rem; }
+  /* line 61, ../sass/modules/_section-our-team.scss */
   .section-our-team img {
     margin-left: 0;
     margin-bottom: 1rem;
     width: 100%;
     height: auto; }
 
-  /* line 66, ../sass/modules/_section-our-team.scss */
+  /* line 68, ../sass/modules/_section-our-team.scss */
   .team {
     flex-direction: column;
     justify-content: center;
     text-align: left; }
 
-  /* line 72, ../sass/modules/_section-our-team.scss */
+  /* line 74, ../sass/modules/_section-our-team.scss */
   .col-team-1 {
     width: 100%; }
 
-  /* line 75, ../sass/modules/_section-our-team.scss */
+  /* line 77, ../sass/modules/_section-our-team.scss */
   .col-team-2 {
     width: 100%; }
+  /* line 79, ../sass/modules/_section-our-team.scss */
+  .col-team-2 h4 {
+    padding: 0.5rem 1rem; }
 
-  /* line 78, ../sass/modules/_section-our-team.scss */
+  /* line 83, ../sass/modules/_section-our-team.scss */
   .members {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
 
-  /* line 83, ../sass/modules/_section-our-team.scss */
+  /* line 88, ../sass/modules/_section-our-team.scss */
   .member {
-    width: 31%; } }
+    width: 30%; } }
 @media only screen and (min-width: 1100px) {
-  /* line 90, ../sass/modules/_section-our-team.scss */
+  /* line 95, ../sass/modules/_section-our-team.scss */
   .member {
     width: 24%; } }

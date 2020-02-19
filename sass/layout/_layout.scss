@@ -66,7 +66,13 @@ HAMBURGER
 /*
 LAYOUT
 */
-
+.container{
+    width: 100%;
+}
+.wrap{
+    max-width: 1400px;
+    margin: 0 auto;
+}
 .colored{
     color: map-get($colors, color2);
 }
@@ -97,12 +103,15 @@ footer{
         margin-top: 3rem;
     }
     .social-footer{
-        
+        margin: 0 auto;
+        width : 25rem;
         padding-top: 5rem;
-        
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
         display:flex;
         flex-direction: row;
         justify-content: center;
+        border-bottom: 2px solid map-get($colors, color4);
 
         
         .fab{
@@ -113,22 +122,11 @@ footer{
     }
     .logo-footer{
         color: map-get($colors, color4);
-        margin-top: 8rem;
-        margin-bottom: 4rem;
+        margin: 4rem 0;
         height: 4rem;
         width: 8rem;
         display: inline-block;
-        ::before{
-            position : absolute;  
-            top: -1rem;
-            text-align: center;
-            display: inline-block;
-            content: "";
-            width: 10rem; 
-            height: 3px;
-            background-color: map-get($colors, color4);
-            left: calc(50% - 5rem);
-        }
+
         img{
             color: map-get($colors, color4);
         }

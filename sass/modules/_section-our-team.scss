@@ -32,12 +32,12 @@
 
 .name{
     color: map-get($colors, color2);
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
-.job{
-    color: map-get($colors, color1);
+.col-team-2 .job{
     font-size: 1rem;
+    color: map-get($colors, color1);
 }
 
 .social-team{
@@ -48,14 +48,16 @@
     width: 12rem;
         .fab{
         color: map-get($colors, color1);
-        font-size: 1rem;
+        font-size: 1.2rem;
         
         }
 }
 
 @media only screen and (min-width: 700px){
     .section-our-team{
-        padding-left: 0;
+        max-width: 100%;
+        padding: 0 1rem;
+        
             img{
                 margin-left: 0;
                 margin-bottom: 1rem;
@@ -74,6 +76,9 @@
     }
     .col-team-2{
         width: 100%;
+        h4{
+            padding: .5rem 1rem ;
+        }
     }
     .members{
         display: flex;
@@ -81,7 +86,7 @@
         justify-content: space-between;
     }
     .member{
-        width: 31%;
+        width: 30%;
 
     }
 }
