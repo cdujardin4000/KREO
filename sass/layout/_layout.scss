@@ -17,9 +17,41 @@ HEADER
 }
 /*
 MENU
-*/
+
 #menuPrincipale{
     display: none;
+}
+*/
+.l-main-menu{
+    height: 100vh;
+    background-color: map-get($colors, color2);
+    text-align: center;
+    width: 100%;
+    nav{
+        margin: auto;
+    }
+    
+    ul{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+        
+    }
+    li{
+        width: 100%;
+        justify-content: space-around;
+        
+    }    
+    a{
+        
+        list-style: none;
+        text-decoration: none;
+        display: block;
+        padding: 2rem 5rem;
+        color: map-get($colors, color5);
+    }
 }
 
 /*
