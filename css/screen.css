@@ -118,7 +118,7 @@ p {
 
 /* line 70, ../sass/base/_base.scss */
 strong {
-  color: #fdc501; }
+  color: #e21818; }
 
 /*
 HEADER
@@ -146,8 +146,8 @@ MENU
 }*/
 /* line 24, ../sass/layout/_layout.scss */
 #menuPrincipale {
-  position: absolute;
-  top: 0; }
+  position: fixed;
+  margin-top: -4rem; }
 
 /* line 28, ../sass/layout/_layout.scss */
 .l-main-menu.open {
@@ -157,7 +157,7 @@ MENU
 /* line 32, ../sass/layout/_layout.scss */
 .l-main-menu {
   height: 100vh;
-  background-color: #11151a;
+  background-color: black;
   text-align: center;
   width: 100%;
   justify-content: center;
@@ -168,16 +168,16 @@ MENU
   z-index: 500;
   transform: translateX(-100%);
   transition: transform 0.4s; }
-/* line 48, ../sass/layout/_layout.scss */
+/* line 49, ../sass/layout/_layout.scss */
 .l-main-menu ul {
   display: flex;
   flex-direction: column;
   list-style-type: none;
   margin: auto; }
-/* line 56, ../sass/layout/_layout.scss */
+/* line 57, ../sass/layout/_layout.scss */
 .l-main-menu li {
   padding: 6px 0; }
-/* line 60, ../sass/layout/_layout.scss */
+/* line 61, ../sass/layout/_layout.scss */
 .l-main-menu a {
   position: relative;
   list-style: none;
@@ -188,7 +188,7 @@ MENU
   transition: 0.5s;
   margin: 1rem 0;
   text-align: center; }
-/* line 71, ../sass/layout/_layout.scss */
+/* line 72, ../sass/layout/_layout.scss */
 .l-main-menu a::after {
   position: absolute;
   content: "";
@@ -198,85 +198,113 @@ MENU
   height: 3px;
   background: #fdc501;
   transform: scaleX(0);
-  transform-origin: right;
+  transform-origin: left;
   transition: transform 0.5s; }
-/* line 84, ../sass/layout/_layout.scss */
+/* line 85, ../sass/layout/_layout.scss */
 .l-main-menu a:hover {
   color: #949495; }
-/* line 88, ../sass/layout/_layout.scss */
+/* line 89, ../sass/layout/_layout.scss */
 .l-main-menu a:hover::after {
   transform: scaleX(1);
-  transform-origin: left; }
+  transform-origin: right; }
 
 /*
 HAMBURGER
 */
-/* line 100, ../sass/layout/_layout.scss */
+/* line 101, ../sass/layout/_layout.scss */
 .burger-box {
-  position: absolute;
-  right: 2rem;
-  top: 2rem; }
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 501; }
 
-/* line 105, ../sass/layout/_layout.scss */
+/* line 107, ../sass/layout/_layout.scss */
 .nav-hamburger {
-  position: relative;
-  width: 42px;
-  height: 24px;
-  cursor: pointer; }
-
-/* line 113, ../sass/layout/_layout.scss */
-.nav-hamburger span {
-  width: 100%;
-  height: 4px;
-  display: block;
-  position: absolute;
-  top: 50%;
-  background-color: #fdc501; }
-
+  --color: #fff;
+  width: 36px;
+  height: 36px;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 501;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-appearence: none;
+  -webkit-tap-highlight-color: transparent; }
 /* line 122, ../sass/layout/_layout.scss */
-.nav-hamburger span::before, .hamburger span::after {
-  content: '';
-  transform: translateX(50%);
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background-color: #fdc501; }
-
-/* line 131, ../sass/layout/_layout.scss */
-.nav-hamburger span::before {
-  transform: translateY(10px); }
-
-/* line 135, ../sass/layout/_layout.scss */
-.nav-hamburger span::after {
-  transform: translateY(-10px); }
+.nav-hamburger svg {
+  width: 64px;
+  height: 48px;
+  top: -6px;
+  left: -14px;
+  stroke: var(--color);
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  display: block;
+  position: absolute; }
+/* line 134, ../sass/layout/_layout.scss */
+.nav-hamburger svg path {
+  transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s);
+  stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+  stroke-dashoffset: var(--offset, 126px);
+  transform: translateZ(0); }
+/* line 139, ../sass/layout/_layout.scss */
+.nav-hamburger svg path:nth-child(2) {
+  --duration: .7s;
+  --easing: ease-in;
+  --offset: 100px;
+  --array-2: 74px; }
+/* line 145, ../sass/layout/_layout.scss */
+.nav-hamburger svg path:nth-child(3) {
+  --offset: 133px;
+  --array-2: 107px; }
+/* line 153, ../sass/layout/_layout.scss */
+.nav-hamburger.active svg path {
+  --offset: 57px; }
+/* line 155, ../sass/layout/_layout.scss */
+.nav-hamburger.active svg path:nth-child(1), .nav-hamburger.active svg path:nth-child(3) {
+  --delay: .15s;
+  --easing: cubic-bezier(0.2, 0.4, 0.2, 1.1); }
+/* line 160, ../sass/layout/_layout.scss */
+.nav-hamburger.active svg path:nth-child(2) {
+  --duration: .4s;
+  --offset: 2px;
+  --array-1: 1px; }
+/* line 165, ../sass/layout/_layout.scss */
+.nav-hamburger.active svg path:nth-child(3) {
+  --offset: 58px; }
 
 /*
 LAYOUT
 */
-/* line 142, ../sass/layout/_layout.scss */
+/* line 178, ../sass/layout/_layout.scss */
 .wrap {
   max-width: 1400px;
   margin: 0 auto; }
 
-/* line 146, ../sass/layout/_layout.scss */
+/* line 182, ../sass/layout/_layout.scss */
 .colored {
   color: #fdc501; }
 
 /*
 FOOTER
 */
-/* line 153, ../sass/layout/_layout.scss */
+/* line 189, ../sass/layout/_layout.scss */
 footer {
   position: relative;
   background-color: black;
   text-align: center;
   padding: 0 1rem; }
-/* line 158, ../sass/layout/_layout.scss */
+/* line 194, ../sass/layout/_layout.scss */
 footer a {
   text-decoration: none;
   color: #fdc501;
   font-weight: bold; }
-/* line 163, ../sass/layout/_layout.scss */
+/* line 199, ../sass/layout/_layout.scss */
 footer #top {
   position: absolute;
   top: -1.5rem;
@@ -285,10 +313,10 @@ footer #top {
   color: white;
   text-decoration: none;
   padding: 1rem; }
-/* line 173, ../sass/layout/_layout.scss */
+/* line 209, ../sass/layout/_layout.scss */
 footer .copyright {
   margin-top: 3rem; }
-/* line 176, ../sass/layout/_layout.scss */
+/* line 212, ../sass/layout/_layout.scss */
 footer .social-footer {
   margin: 0 auto;
   width: 25rem;
@@ -299,24 +327,24 @@ footer .social-footer {
   flex-direction: row;
   justify-content: center;
   border-bottom: 2px solid #949495; }
-/* line 188, ../sass/layout/_layout.scss */
+/* line 224, ../sass/layout/_layout.scss */
 footer .social-footer .fab {
   font-size: 1.5rem;
   color: #949495;
   margin: 0 1rem; }
-/* line 194, ../sass/layout/_layout.scss */
+/* line 230, ../sass/layout/_layout.scss */
 footer .logo-footer {
   color: #949495;
   margin: 4rem 0;
   height: 4rem;
   width: 8rem;
   display: inline-block; }
-/* line 201, ../sass/layout/_layout.scss */
+/* line 237, ../sass/layout/_layout.scss */
 footer .logo-footer img {
   color: #949495; }
 
 @media only screen and (min-width: 1100px) {
-  /* line 212, ../sass/layout/_layout.scss */
+  /* line 248, ../sass/layout/_layout.scss */
   footer {
     padding: 0 20rem; } }
 /* line 1, ../sass/modules/_section-home.scss */
@@ -406,12 +434,18 @@ footer .logo-footer img {
 /* line 14, ../sass/modules/_section-contact.scss */
 .section-contact input {
   width: calc(100% - 4rem);
-  height: 2rem; }
-/* line 18, ../sass/modules/_section-contact.scss */
+  height: 2rem;
+  font-family: inherit;
+  font-size: inherit; }
+/* line 20, ../sass/modules/_section-contact.scss */
 .section-contact #message {
+  width: calc(100% - 4rem);
   height: 10rem;
-  margin-bottom: 2rem; }
-/* line 22, ../sass/modules/_section-contact.scss */
+  margin-bottom: 2rem;
+  font-family: inherit;
+  font-size: inherit;
+  padding-top: .5rem; }
+/* line 28, ../sass/modules/_section-contact.scss */
 .section-contact #send {
   padding: 1rem 8rem;
   background-color: #fdc501;
@@ -419,35 +453,35 @@ footer .logo-footer img {
   text-decoration: none;
   text-align: center;
   margin-bottom: 2rem; }
-/* line 30, ../sass/modules/_section-contact.scss */
+/* line 36, ../sass/modules/_section-contact.scss */
 .section-contact h4 {
   color: #fdc501;
   font-size: 1.5rem;
   text-align: left;
   margin-bottom: 1rem;
   padding: 0 2rem; }
-/* line 37, ../sass/modules/_section-contact.scss */
+/* line 43, ../sass/modules/_section-contact.scss */
 .section-contact p {
   text-align: left;
   margin: 2rem 0;
   padding: 0 2rem; }
-/* line 44, ../sass/modules/_section-contact.scss */
+/* line 50, ../sass/modules/_section-contact.scss */
 .section-contact .info {
   margin-bottom: 5rem; }
 
 @media only screen and (min-width: 700px) {
-  /* line 50, ../sass/modules/_section-contact.scss */
+  /* line 56, ../sass/modules/_section-contact.scss */
   .contacts {
     display: flex; }
 
-  /* line 55, ../sass/modules/_section-contact.scss */
+  /* line 61, ../sass/modules/_section-contact.scss */
   .formulaire, .info {
     width: 50%; }
 
-  /* line 58, ../sass/modules/_section-contact.scss */
+  /* line 64, ../sass/modules/_section-contact.scss */
   .info {
     padding-bottom: 2rem; }
-  /* line 60, ../sass/modules/_section-contact.scss */
+  /* line 66, ../sass/modules/_section-contact.scss */
   .info p {
     margin-top: 1rem; } }
 /* line 1, ../sass/modules/_section-works.scss */
