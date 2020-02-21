@@ -48,7 +48,7 @@ table {
 /*ici touts les balises g├®n├®riques*/
 /* line 2, ../sass/base/_base.scss */
 html {
-  background-color: #0f141a;
+  background-color: #11151a;
   text-align: center; }
 
 /* line 7, ../sass/base/_base.scss */
@@ -118,7 +118,7 @@ p {
 
 /* line 70, ../sass/base/_base.scss */
 strong {
-  color: #e21818; }
+  color: #fdc501; }
 
 /*
 HEADER
@@ -143,54 +143,89 @@ MENU
 
 #menuPrincipale{
     display: none;
-}
-*/
-/* line 25, ../sass/layout/_layout.scss */
+}*/
+/* line 24, ../sass/layout/_layout.scss */
+#menuPrincipale {
+  position: absolute;
+  top: 0; }
+
+/* line 28, ../sass/layout/_layout.scss */
+.l-main-menu.open {
+  transform: translateX(0%);
+  transition: transform 0.4s; }
+
+/* line 32, ../sass/layout/_layout.scss */
 .l-main-menu {
   height: 100vh;
-  background-color: #fdc501;
+  background-color: #11151a;
   text-align: center;
-  width: 100%; }
-/* line 30, ../sass/layout/_layout.scss */
-.l-main-menu nav {
-  margin: auto; }
-/* line 34, ../sass/layout/_layout.scss */
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  display: flex;
+  z-index: 500;
+  transform: translateX(-100%);
+  transition: transform 0.4s; }
+/* line 48, ../sass/layout/_layout.scss */
 .l-main-menu ul {
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: start; }
-/* line 42, ../sass/layout/_layout.scss */
+  list-style-type: none;
+  margin: auto; }
+/* line 56, ../sass/layout/_layout.scss */
 .l-main-menu li {
-  width: 100%;
-  justify-content: space-around; }
-/* line 47, ../sass/layout/_layout.scss */
+  padding: 6px 0; }
+/* line 60, ../sass/layout/_layout.scss */
 .l-main-menu a {
+  position: relative;
   list-style: none;
   text-decoration: none;
   display: block;
-  padding: 2rem 5rem;
-  color: #505457; }
+  padding: 1rem 0;
+  color: white;
+  transition: 0.5s;
+  margin: 1rem 0;
+  text-align: center; }
+/* line 71, ../sass/layout/_layout.scss */
+.l-main-menu a::after {
+  position: absolute;
+  content: "";
+  top: 85%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #fdc501;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s; }
+/* line 84, ../sass/layout/_layout.scss */
+.l-main-menu a:hover {
+  color: #949495; }
+/* line 88, ../sass/layout/_layout.scss */
+.l-main-menu a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left; }
 
 /*
 HAMBURGER
 */
-/* line 60, ../sass/layout/_layout.scss */
+/* line 100, ../sass/layout/_layout.scss */
 .burger-box {
   position: absolute;
   right: 2rem;
   top: 2rem; }
 
-/* line 65, ../sass/layout/_layout.scss */
-.hamburger {
+/* line 105, ../sass/layout/_layout.scss */
+.nav-hamburger {
   position: relative;
   width: 42px;
   height: 24px;
   cursor: pointer; }
 
-/* line 73, ../sass/layout/_layout.scss */
-.hamburger span {
+/* line 113, ../sass/layout/_layout.scss */
+.nav-hamburger span {
   width: 100%;
   height: 4px;
   display: block;
@@ -198,8 +233,8 @@ HAMBURGER
   top: 50%;
   background-color: #fdc501; }
 
-/* line 82, ../sass/layout/_layout.scss */
-.hamburger span::before, .hamburger span::after {
+/* line 122, ../sass/layout/_layout.scss */
+.nav-hamburger span::before, .hamburger span::after {
   content: '';
   transform: translateX(50%);
   position: absolute;
@@ -207,40 +242,41 @@ HAMBURGER
   height: 4px;
   background-color: #fdc501; }
 
-/* line 91, ../sass/layout/_layout.scss */
-.hamburger span::before {
+/* line 131, ../sass/layout/_layout.scss */
+.nav-hamburger span::before {
   transform: translateY(10px); }
 
-/* line 95, ../sass/layout/_layout.scss */
-.hamburger span::after {
+/* line 135, ../sass/layout/_layout.scss */
+.nav-hamburger span::after {
   transform: translateY(-10px); }
 
 /*
 LAYOUT
 */
-/* line 102, ../sass/layout/_layout.scss */
+/* line 142, ../sass/layout/_layout.scss */
 .wrap {
   max-width: 1400px;
   margin: 0 auto; }
 
-/* line 106, ../sass/layout/_layout.scss */
+/* line 146, ../sass/layout/_layout.scss */
 .colored {
   color: #fdc501; }
 
 /*
 FOOTER
 */
-/* line 113, ../sass/layout/_layout.scss */
+/* line 153, ../sass/layout/_layout.scss */
 footer {
   position: relative;
   background-color: black;
   text-align: center;
   padding: 0 1rem; }
-/* line 118, ../sass/layout/_layout.scss */
+/* line 158, ../sass/layout/_layout.scss */
 footer a {
   text-decoration: none;
-  color: #fdc501; }
-/* line 122, ../sass/layout/_layout.scss */
+  color: #fdc501;
+  font-weight: bold; }
+/* line 163, ../sass/layout/_layout.scss */
 footer #top {
   position: absolute;
   top: -1.5rem;
@@ -249,10 +285,10 @@ footer #top {
   color: white;
   text-decoration: none;
   padding: 1rem; }
-/* line 132, ../sass/layout/_layout.scss */
+/* line 173, ../sass/layout/_layout.scss */
 footer .copyright {
   margin-top: 3rem; }
-/* line 135, ../sass/layout/_layout.scss */
+/* line 176, ../sass/layout/_layout.scss */
 footer .social-footer {
   margin: 0 auto;
   width: 25rem;
@@ -263,24 +299,24 @@ footer .social-footer {
   flex-direction: row;
   justify-content: center;
   border-bottom: 2px solid #949495; }
-/* line 147, ../sass/layout/_layout.scss */
+/* line 188, ../sass/layout/_layout.scss */
 footer .social-footer .fab {
   font-size: 1.5rem;
   color: #949495;
   margin: 0 1rem; }
-/* line 153, ../sass/layout/_layout.scss */
+/* line 194, ../sass/layout/_layout.scss */
 footer .logo-footer {
   color: #949495;
   margin: 4rem 0;
   height: 4rem;
   width: 8rem;
   display: inline-block; }
-/* line 160, ../sass/layout/_layout.scss */
+/* line 201, ../sass/layout/_layout.scss */
 footer .logo-footer img {
   color: #949495; }
 
 @media only screen and (min-width: 1100px) {
-  /* line 171, ../sass/layout/_layout.scss */
+  /* line 212, ../sass/layout/_layout.scss */
   footer {
     padding: 0 20rem; } }
 /* line 1, ../sass/modules/_section-home.scss */

@@ -68,7 +68,7 @@ p{
 }
 
 strong{
-    color: rgb(226, 24, 24);
+    color: map-get($colors, color2);
 }
 
 
