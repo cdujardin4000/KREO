@@ -9,7 +9,7 @@ body{
 }
 header{
     background-color: black;
-    border-bottom: 1px solid map-get($colors, color5)
+    
 }
 
 h1{
@@ -71,4 +71,8 @@ strong{
     color: rgb(226, 24, 24);
 }
 
-
+@media only screen and (min-width: 700px){
+    h1{
+        margin: 2rem 3rem 0;
+    }
+}
