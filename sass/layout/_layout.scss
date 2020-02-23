@@ -129,6 +129,7 @@ MENU
             }
         }
     }
+
 }
 @media only screen and (min-width: 1100px){
     .l-main-menu{
@@ -281,7 +282,7 @@ footer{
     }
     .logo-footer{
         color: map-get($colors, color4);
-        margin: 4rem 0;
+        margin: 2rem 0;
         height: 4rem;
         width: 8rem;
         display: inline-block;
@@ -292,6 +293,7 @@ footer{
     }
     
 }
+
 
 
 
