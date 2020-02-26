@@ -25,13 +25,22 @@
             font-size: inherit;
             padding-top: .5rem;
         }
+        
         #send{
-            padding: 1rem 8rem;
+            /*element flex dc pas besoin de padding horizontal. il prend toute la largeur du parent(a verifier)*/
+            padding: 1rem 0;
+            margin-left: 2rem;
+            margin-right: 2rem;
             background-color: map-get($colors, color2);
             color: map-get($colors, color1);
             text-decoration: none;
             text-align: center;
             margin-bottom: 2rem;
+            transform: perspective(50px) translateZ(0px);
+            transition: transform 100ms linear;
+            &:hover{
+                transform: perspective(50px) translateZ(.5px);
+            }
         }
         h4{
             color:  map-get($colors, color2);

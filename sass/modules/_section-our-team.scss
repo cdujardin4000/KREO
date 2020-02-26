@@ -47,8 +47,13 @@
     justify-content: space-between;
     width: 12rem;
         .fab{
-        color: map-get($colors, color1);
-        font-size: 1.2rem;
+            color: map-get($colors, color1);
+            font-size: 1.2rem;
+            transform: perspective(50px) translateZ(0px);
+            transition: transform 100ms linear;
+                &:hover {
+                transform: perspective(50px) translateZ(2px);
+                }
         
         }
 }

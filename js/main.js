@@ -1,8 +1,6 @@
 const   menu        =   document.querySelector('.l-main-menu');
-//var     items       =   document.querySelectorAll('.secHome', '.secWorks', '.secServices', '.secAbout', '.secContact');
-//items.addEventListener('click', e => {
-//    menu.classList.toggle('open');
-//});
+const   btn         =   document.querySelector('.nav-hamburger');
+
 document.querySelectorAll('.nav-hamburger').forEach(btn => {
     btn.addEventListener('click', e => {
         btn.classList.toggle('active');
@@ -10,7 +8,11 @@ document.querySelectorAll('.nav-hamburger').forEach(btn => {
     });
     
 });
-
-
+document.querySelectorAll('.link').forEach(item => {
+    item.addEventListener('click', e => {
+        menu.classList.toggle('open');
+        btn.classList.toggle('active');
+    });
+});
 
 

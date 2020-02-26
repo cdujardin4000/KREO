@@ -1,19 +1,29 @@
 .section-works{
+    position: relative;
     background-color: black;
     h3{
         color: map-get($colors , color1);
     }
 }
 
+
+
 .bnt-more{
-    position: relative;
-    top: -0.5rem;
+    position: absolute;
+    top: -1.5rem;
     background-color: map-get($colors, color3);
     color: map-get($colors, color1);
     text-decoration: none;
     padding: 1rem;
-    
+    z-index: 100;
+    left: calc(50% - 69px);
+    transform: perspective(50px) translateZ(0px);
+            transition: transform 100ms linear;
+                &:hover {
+                transform: perspective(50px) translateZ(2px);
+                }
 }
+
 
 .gallery{
     display: flex;
@@ -31,7 +41,7 @@
 
 @media only screen and (min-width: 700px){
     .bnt-more{
-        left: 15rem;
+        left: 75%;
     }
     .gallery{    
         img{
